@@ -1,6 +1,9 @@
-import { Section } from './Section/Section';
 import user from '../user.json';
+import data from '../data.json';
 import { Profile } from './Profile/Profile';
+import { StatisticsList } from './StatisticsList/StatisticsList';
+import { Section } from './Section/Section';
+
 export const App = () => {
   return (
     <div
@@ -21,6 +24,9 @@ export const App = () => {
           avatar={user.avatar}
           stats={user.stats}
         />
+      </Section>
+      <Section title="Upload stats">
+        <StatisticsList items={data} />
       </Section>
     </div>
   );
