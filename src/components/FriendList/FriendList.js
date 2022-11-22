@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
+
 export function FriendList({ items }) {
   return (
     <ul>

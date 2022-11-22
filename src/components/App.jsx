@@ -1,10 +1,12 @@
 import user from '../user.json';
 import data from '../data.json';
 import friends from '../friends.json';
+import transactions from '../transactions.json';
 import { Profile } from './Profile/Profile';
 import { StatisticsList } from './StatisticsList/StatisticsList';
 import { Section } from './Section/Section';
 import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
@@ -32,6 +34,9 @@ export const App = () => {
       </Section>
       <Section title="Friends List">
         <FriendList items={friends} />
+      </Section>
+      <Section title="Transaction History">
+        <TransactionHistory items={transactions} />
       </Section>
     </div>
   );
