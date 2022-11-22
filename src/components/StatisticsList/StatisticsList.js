@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Statistic } from 'components/Statistic/Statistic';
+
 export function StatisticsList({ items }) {
   return (
     <ul>
