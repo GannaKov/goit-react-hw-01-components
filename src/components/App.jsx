@@ -10,16 +10,7 @@ import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <div>
       <Section title="Профиль социальной сети">
         <Profile
           username={user.username}
@@ -42,3 +33,11 @@ export const App = () => {
   );
 };
 //<Profile items={user} />
+// style={{
+//         height: '100vh',
+//         display: 'flex',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         fontSize: 40,
+//         color: '#010101',
+//       }}
