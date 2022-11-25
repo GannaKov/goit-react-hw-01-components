@@ -3,10 +3,10 @@
   border-radius: 50%;
   /* background-color: blueviolet; */
   height: 10px;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 .avatar {
-  margin-right: 10px;
+  margin-right: 30px;
   border-radius: 5%;
   overflow: hidden;
   border: 1px solid rgba(92, 91, 91, 0.555);

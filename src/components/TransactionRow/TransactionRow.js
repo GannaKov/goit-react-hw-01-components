@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from './TransactionRow.module.css';
+// import css from './TransactionRow.module.css';
 export function TransactionRow({ type, amount, currency }) {
   return (
     <>
