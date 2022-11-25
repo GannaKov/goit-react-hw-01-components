@@ -5,7 +5,11 @@ export function StatisticsList({ items }) {
   return (
     <ul className={css.statList}>
       {items.map(item => (
-        <li className={css.item} key={item.id}>
+        <li
+          className={css.item}
+          key={item.id}
+          style={{ backgroundColor: getRandomHexColor() }}
+        >
           <Statistic label={item.label} percentage={item.percentage} />
         </li>
       ))}
@@ -15,3 +19,7 @@ export function StatisticsList({ items }) {
 StatisticsList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
 };
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
