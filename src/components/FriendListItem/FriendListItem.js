@@ -17,12 +17,13 @@ FriendListItem.propTypes = {
 };
 
 function getStatusSpan(isOnline) {
-  const classNames = [css.status];
+  // const classNames = [css.status];
+  let statusClassName;
   if (isOnline) {
-    classNames.push(css.isOnline);
+    statusClassName = 'isOnline';
   } else {
-    classNames.push(css.notOnline);
+    statusClassName = 'notOnline';
   }
 
-  return <span className={classNames.join(' ')}></span>;
+  return <span className={css[statusClassName]}></span>;
 }

@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import css from './Statistic.module.css';
 
 export function Statistic({ label, percentage }) {
-  console.log(percentage);
   return (
     <>
       <span className={css.label}>{label}</span>
