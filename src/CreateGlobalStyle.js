@@ -1,6 +1,7 @@
-@import-normalize; /* bring in normalize.css styles */
-
-p,
+import { createGlobalStyle } from 'styled-components';
+import 'modern-normalize';
+export const GlobalStyle = createGlobalStyle`
+ p,
 h1,
 h2,
 h3,
@@ -42,3 +43,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+`;

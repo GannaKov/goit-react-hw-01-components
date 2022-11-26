@@ -1,4 +1,5 @@
-.friendList {
+import styled from 'styled-components';
+export const FriendListUl = styled.ul`
   display: flex;
   flex-direction: column;
 
@@ -6,8 +7,9 @@
   margin: 0 auto;
   align-items: flex-start;
   row-gap: 15px;
-}
-.item {
+`;
+
+export const Item = styled.li`
   padding: 10px 20px;
   width: 100%;
   display: flex;
@@ -16,4 +18,4 @@
   border-radius: 2%;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+`;

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-// import css from './TransactionRow.module.css';
+import { Td } from './TransactionRow.styled';
+
 export function TransactionRow({ type, amount, currency }) {
   return (
     <>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
+      <Td>{type}</Td>
+      <Td>{amount}</Td>
+      <Td>{currency}</Td>
     </>
   );
 }

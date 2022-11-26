@@ -2,16 +2,18 @@ import user from 'user.json';
 import data from 'data.json';
 import friends from 'friends.json';
 import transactions from 'transactions.json';
-import { Profile } from './Profile/Profile';
-import { StatisticsList } from './StatisticsList/StatisticsList';
-import { Section } from './Section/Section';
-import { FriendList } from './FriendList/FriendList';
-import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { Profile } from '../Profile/Profile';
+import { StatisticsList } from '../StatisticsList/StatisticsList';
+import { SectionPart } from '../Section/Section';
+import { FriendList } from '../FriendList/FriendList';
+import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
+import { GlobalStyle } from 'CreateGlobalStyle';
 
 export const App = () => {
   return (
     <div>
-      <Section title="Профиль социальной сети">
+      <GlobalStyle />
+      <SectionPart title="Профиль социальной сети">
         <Profile
           username={user.username}
           tag={user.tag}
@@ -19,16 +21,16 @@ export const App = () => {
           avatar={user.avatar}
           stats={user.stats}
         />
-      </Section>
-      <Section title="Upload stats">
+      </SectionPart>
+      <SectionPart title="Upload stats">
         <StatisticsList items={data} />
-      </Section>
-      <Section title="Friends List">
+      </SectionPart>
+      <SectionPart title="Friends List">
         <FriendList items={friends} />
-      </Section>
-      <Section title="Transaction History">
+      </SectionPart>
+      <SectionPart title="Transaction History">
         <TransactionHistory items={transactions} />
-      </Section>
+      </SectionPart>
     </div>
   );
 };

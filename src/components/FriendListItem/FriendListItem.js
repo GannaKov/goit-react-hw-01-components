@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import css from './FriendListItem.module.css';
+import { Status, Avatar, Name } from './friendListItem.styled';
 
 export function FriendListItem({ avatar, name, status }) {
   return (
     <>
-      {getStatusSpan(status)}
-      <img className={css.avatar} src={avatar} alt={name} width="48" />
-      <p className={css.name}>{name}</p>
+      <Status status={status}></Status>
+      <Avatar src={avatar} alt={name} width="48" />
+      <Name>{name}</Name>
     </>
   );
 }
@@ -15,15 +15,3 @@ FriendListItem.propTypes = {
   name: PropTypes.string.isRequired,
   status: PropTypes.bool.isRequired,
 };
-
-function getStatusSpan(isOnline) {
-  // const classNames = [css.status];
-  let statusClassName;
-  if (isOnline) {
-    statusClassName = 'isOnline';
-  } else {
-    statusClassName = 'notOnline';
-  }
-
-  return <span className={css[statusClassName]}></span>;
-}
