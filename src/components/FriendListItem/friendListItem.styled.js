@@ -5,7 +5,7 @@ export const Status = styled.span`
   border-radius: 50%;
   height: 10px;
   margin-right: 30px;
-  background-color: ${props => (props.status ? 'green' : 'red')};
+  background-color: ${props => (props.statusOnline ? 'green' : 'red')};
 `;
 
 export const Avatar = styled.img`
