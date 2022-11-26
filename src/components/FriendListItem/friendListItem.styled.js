@@ -5,13 +5,7 @@ export const Status = styled.span`
   border-radius: 50%;
   height: 10px;
   margin-right: 30px;
-  background-color: ${props => {
-    if (props.status) {
-      return 'green';
-    } else {
-      return 'red';
-    }
-  }};
+  background-color: ${props => (props.status ? 'green' : 'red')};
 `;
 
 export const Avatar = styled.img`
@@ -27,3 +21,8 @@ export const Name = styled.p`
   font-size: 18px;
   font-weight: 600;
 `;
+//  if (props.status) {
+//       return 'green';
+//     } else {
+//       return 'red';
+//     }
