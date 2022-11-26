@@ -1,11 +1,19 @@
 import styled from 'styled-components';
 
+const getStatusColor = props => {
+  if (props.statusOnline) {
+    return 'green';
+  } else {
+    return 'red';
+  }
+};
+
 export const Status = styled.span`
   width: 10px;
   border-radius: 50%;
   height: 10px;
   margin-right: 30px;
-  background-color: ${props => (props.statusOnline ? 'green' : 'red')};
+  background-color: ${getStatusColor};
 `;
 
 export const Avatar = styled.img`
@@ -21,8 +29,4 @@ export const Name = styled.p`
   font-size: 18px;
   font-weight: 600;
 `;
-//  if (props.status) {
-//       return 'green';
-//     } else {
-//       return 'red';
-//     }
+// background-color: ${props => (props.statusOnline ? 'green' : 'red')};
